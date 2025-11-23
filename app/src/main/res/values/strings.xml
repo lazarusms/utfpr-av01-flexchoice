@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Flex Choice</string>
+    <string name="label_fuel_consumption_1">Consumo Combustível 1:</string>
+    <string name="label_fuel_consumption_2">Consumo Combustível 2:</string>
+    <string name="label_price_per_liter_1">Valor Litro do Combustível 1:</string>
+    <string name="label_price_per_liter_2">Valor Litro do Combustível 2:</string>
+</resources>
