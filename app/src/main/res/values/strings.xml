@@ -4,4 +4,14 @@
     <string name="label_fuel_consumption_2">Consumo Combustível 2:</string>
     <string name="label_price_per_liter_1">Valor Litro do Combustível 1:</string>
     <string name="label_price_per_liter_2">Valor Litro do Combustível 2:</string>
+    <string name="titulo_tela">Informe os dados dos combustíveis:</string>
+    <string name="input_combustivel_1">Combustível 1:</string>
+    <string name="input_combustivel_2">Combustível 2:</string>
+    <string name="label_string_combustivel">Combustível</string>
+    <string name="label_string_consumo">Consumo/KM</string>
+    <string name="label_string_valor">Valor Litro</string>
+    <string name="botao_buscar_string">Buscar</string>
+    <string name="botao_calcular_string">Calcular</string>
+    <string name="botao_limpar_string">Limpar</string>
+    <string name="label_string_title_select_fuel">Selecione um combustível:</string>
 </resources>

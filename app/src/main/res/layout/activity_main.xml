@@ -1,187 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text_view_fuel_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:importantForAccessibility="no"
-        android:text="Informe os dados dos combustíveis:"
+        android:text="@string/titulo_tela"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/text_view_fuel1_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Combustível 1:"
+        android:text="@string/input_combustivel_1"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="@+id/text_view_fuel_title"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_fuel_title" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/button_search_fuel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Buscar"
-        app:layout_constraintStart_toEndOf="@+id/textInputLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        android:text="@string/botao_buscar_string"
+        app:layout_constraintStart_toEndOf="@+id/text_input_fuel1"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_fuel1_label" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/text_input_consumption1"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+        app:layout_constraintStart_toStartOf="@+id/text_input_fuel1"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_fuel1">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_fuel1_consumption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Consumo/KM"
-            android:inputType="number|numberDecimal" />
+            android:hint="@string/label_string_consumo"
+            android:inputType="number|numberDecimal"
+            android:maxLength="6" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/text_input_price1"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        app:layout_constraintStart_toStartOf="@+id/text_input_consumption1"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_consumption1">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_fuel1_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Valor Litro"
-            android:inputType="number|numberDecimal" />
+            android:hint="@string/label_string_valor"
+            android:inputType="number|numberDecimal"
+            android:maxLength="7" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/text_view_fuel2_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Combustível 2:"
+        android:text="@string/input_combustivel_2"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintStart_toStartOf="@+id/text_input_price1"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_price1" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
+        android:id="@+id/text_input_fuel1"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintBottom_toBottomOf="@+id/button_search_fuel1"
+        app:layout_constraintStart_toStartOf="@+id/text_view_fuel1_label"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_fuel1_label">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_label_input_fuel1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Combustível"
+            android:hint="@string/label_string_combustivel"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Combustível"
+        android:id="@+id/text_input_fuel2"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button6"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        app:layout_constraintBottom_toBottomOf="@+id/button_search_fuel2"
+        app:layout_constraintStart_toStartOf="@+id/text_view_fuel2_label"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_fuel2_label">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_label_input_fuel2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Combustível" />
+            android:hint="@string/label_string_combustivel"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout5"
+        android:id="@+id/text_input_consumption2"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/Combustível"
-        app:layout_constraintTop_toBottomOf="@+id/Combustível">
+        app:layout_constraintStart_toStartOf="@+id/text_input_fuel2"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_fuel2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_fuel2_consumption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Consumo/KM"
+            android:hint="@string/label_string_consumo"
             android:inputType="number|numberDecimal"
+            android:maxLength="6"
             android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout6"
+        android:id="@+id/text_input_price2"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+        app:layout_constraintStart_toStartOf="@+id/text_input_consumption2"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_consumption2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_fuel2_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Valor Litro"
+            android:hint="@string/label_string_valor"
             android:inputType="number|numberDecimal"
+            android:maxLength="7"
             android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/button_search_fuel2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Buscar"
-        app:layout_constraintStart_toEndOf="@+id/Combustível"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        android:text="@string/botao_buscar_string"
+        app:layout_constraintStart_toEndOf="@+id/text_input_fuel2"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_fuel2_label" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/button_calculate_fuel"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Calcular"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
+        android:text="@string/botao_calcular_string"
+        app:layout_constraintStart_toStartOf="@+id/text_input_price2"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_price2" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/button_clear_screen"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
-        android:text="Limpar"
-        app:layout_constraintBottom_toBottomOf="@+id/button7"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="O combustível mais rentável é o: %s"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        android:text="@string/botao_limpar_string"
+        app:layout_constraintBottom_toBottomOf="@+id/button_calculate_fuel"
+        app:layout_constraintStart_toEndOf="@+id/button_calculate_fuel"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_price2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
