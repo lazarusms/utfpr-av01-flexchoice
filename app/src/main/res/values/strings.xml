@@ -8,8 +8,8 @@
     <string name="input_combustivel_1">Combustível 1:</string>
     <string name="input_combustivel_2">Combustível 2:</string>
     <string name="label_string_combustivel">Combustível</string>
-    <string name="label_string_consumo">Consumo/KM</string>
-    <string name="label_string_valor">Valor Litro</string>
+    <string name="label_string_consumo">Consumo (km/l)</string>
+    <string name="label_string_valor">Preço (R$/litro)</string>
     <string name="botao_buscar_string">Buscar</string>
     <string name="botao_calcular_string">Calcular</string>
     <string name="botao_limpar_string">Limpar</string>

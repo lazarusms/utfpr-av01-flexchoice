@@ -18,7 +18,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:importantForAccessibility="no"
         android:text="@string/titulo_tela"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -103,7 +102,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_string_combustivel"
-            android:inputType="text" />
+            android:focusable="false"
+            android:clickable="false"
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -120,7 +121,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_string_combustivel"
-            android:inputType="text" />
+            android:focusable="false"
+            android:clickable="false"
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -156,7 +159,7 @@
             android:hint="@string/label_string_valor"
             android:inputType="number|numberDecimal"
             android:maxLength="7"
-            android:singleLine="true" />
+            android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
