@@ -30,7 +30,7 @@ class SelectFuelActivity : AppCompatActivity() {
             insets
         }
         // id do button que chamou pra sabermos onde preencher
-        callerId = intent.getIntExtra(IntentKeys.REQUEST_ID, -1)
+        callerId = intent.getIntExtra(IntentKeys.REQUEST_ID, IntentKeys.DEFAULT_RETURN_VALUE)
         initFuelList()
     }
 

@@ -9,4 +9,7 @@ object IntentKeys {
 
     // usada para devolver o ID do botão que chamou
     const val RETURN_ID = "return_id"
+
+    // usada indicar o default return
+    const val DEFAULT_RETURN_VALUE = -1
 }

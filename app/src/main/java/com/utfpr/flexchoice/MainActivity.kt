@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     private val getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
             val fuelName = result.data?.getStringExtra(IntentKeys.FUEL_SELECTED)
-            val returnId = result.data?.getIntExtra(IntentKeys.RETURN_ID, -1)
+            val returnId = result.data?.getIntExtra(IntentKeys.RETURN_ID, IntentKeys.DEFAULT_RETURN_VALUE)
 
             validateSelectFuelResponse(fuelName, returnId)
 
@@ -141,7 +141,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         Snackbar.make(binding.root, result,  Snackbar.LENGTH_LONG).show()
-      //  Toast.makeText(this, result, Toast.LENGTH_LONG).show()
     }
 
 
